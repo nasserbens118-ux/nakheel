@@ -150,7 +150,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onSubTabChange }
 
       {/* ── Revenus Nakheel ──────────────────────────────────────────────── */}
       {(() => {
-        const completedOrders = orders.filter(o => o.status === 'delivered' || o.status === 'shipped');
+        const completedOrders = orders.filter(o => o.status === 'delivered' || (o.status as string) === 'shipped');
         const totalCommissions = completedOrders.reduce((sum, o) => sum + (o.commissionAmount ?? o.totalAmount * 0.04), 0);
         const proUsersCount = users.filter(u => u.subscriptionPlan === 'pro').length;
         const totalSubscriptions = proUsersCount * SUBSCRIPTION_PRICE_DA;

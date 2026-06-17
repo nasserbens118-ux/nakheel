@@ -29,12 +29,12 @@ export const CollectCalendar: React.FC = () => {
     w.status === 'submitted' || w.status === 'ai_scored' || w.status === 'accepted'
   );
   const scheduled = wasteRequests.filter(w =>
-    w.status === 'scheduled_for_pickup' && w.scheduledPickupDate
+    w.status === 'scheduled_for_pickup' && (w as any).scheduledPickupDate
   );
 
   const scheduledByDate: Record<string, WasteRequest[]> = {};
   scheduled.forEach(w => {
-    const d = w.scheduledPickupDate!.slice(0, 10);
+    const d = ((w as any).scheduledPickupDate as string).slice(0, 10);
     if (!scheduledByDate[d]) scheduledByDate[d] = [];
     scheduledByDate[d].push(w);
   });
@@ -67,7 +67,7 @@ export const CollectCalendar: React.FC = () => {
 
   const getSupplierName = (supplierId: string) => {
     const u = users.find(u => u.id === supplierId);
-    return u?.name ?? supplierId;
+    return u?.fullName ?? supplierId;
   };
 
   const getWilaya = (w: WasteRequest) => {
