@@ -1,0 +1,7 @@
+-- ⚠️  CE FICHIER EST DÉSACTIVÉ — NE PAS EXÉCUTER
+--
+-- Ce schéma alternatif utilise des UUIDs, ENUMs et des noms de colonnes
+-- incompatibles avec supabaseDB.ts (ex: profile_id vs user_id, location_text vs location).
+-- Il casserait l'application s'il était exécuté.
+--
+-- Le schéma actif est : 001_schema.sql + 002_rpc_functions.sql + 003_rls_policies.sql + 004_missing_columns.sql
