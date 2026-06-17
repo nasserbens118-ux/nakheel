@@ -13,7 +13,7 @@ const config: CapacitorConfig = {
 
   android: {
     allowMixedContent: true,
-    backgroundColor: '#2E5A44',
+    backgroundColor: '#15803D',
     webContentsDebuggingEnabled: false, // true en dev
   },
 
@@ -21,13 +21,13 @@ const config: CapacitorConfig = {
     SplashScreen: {
       launchShowDuration: 2000,
       launchAutoHide: true,
-      backgroundColor: '#2E5A44',
+      backgroundColor: '#15803D',
       androidSplashResourceName: 'splash',
       showSpinner: false,
     },
     StatusBar: {
       style: 'DARK',
-      backgroundColor: '#2E5A44',
+      backgroundColor: '#15803D',
     },
     PushNotifications: {
       presentationOptions: ['badge', 'sound', 'alert'],
