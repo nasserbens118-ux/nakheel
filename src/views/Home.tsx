@@ -1,5 +1,5 @@
 import React from 'react';
-import { Leaf, Sprout, ShieldCheck, ArrowRight, TrendingUp, Globe, Recycle, CheckCircle, XCircle, Star, Building2, Phone } from 'lucide-react';
+import { Leaf, Sprout, ShieldCheck, ArrowRight, TrendingUp, Globe, Recycle, CheckCircle, XCircle, Star, Building2, Phone, Smartphone, Download, Wifi } from 'lucide-react';
 import { SUBSCRIPTION_PRICE_DA } from '../services/db';
 import { useLanguage } from '../components/LanguageContext';
 
@@ -362,6 +362,107 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 ? 'اشتراك شهري Pro (15,000 د.ج) + عمولة 4% على كل طلبية مكتملة. نخيل يربح عندما تربح أنت.'
                 : 'Abonnement Pro mensuel (15 000 DA) + commission 4% sur chaque commande finalisée. Nakheel gagne quand vous gagnez.'}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mobile App Section */}
+      <section style={{ padding: '5rem 0', background: 'linear-gradient(135deg, hsl(145,63%,12%) 0%, hsl(145,63%,20%) 100%)', color: 'white' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center', maxWidth: '960px', margin: '0 auto' }}>
+
+            {/* Left: text */}
+            <div>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)', padding: '0.35rem 1rem', borderRadius: '999px', fontSize: '0.78rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--accent)', marginBottom: '1.25rem' }}>
+                <Smartphone size={13} /> {language === 'ar' ? 'تطبيق أندرويد' : 'Application Android'}
+              </span>
+              <h2 style={{ color: 'white', fontSize: '2rem', fontWeight: 800, lineHeight: 1.2, marginBottom: '1rem' }}>
+                {language === 'ar' ? 'نخيل في جيبك' : 'Nakheel dans votre poche'}
+              </h2>
+              <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '1rem', lineHeight: 1.65, marginBottom: '2rem' }}>
+                {language === 'ar'
+                  ? 'أدر طلباتك، تابع جمع المخلفات، واستلم التنبيهات أينما كنت. تطبيق أندرويد مجاني ويعمل بدون إنترنت.'
+                  : 'Gérez vos demandes, suivez vos collectes et recevez des notifications où que vous soyez. Application Android gratuite, fonctionne hors ligne.'}
+              </p>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
+                {[
+                  language === 'ar' ? 'جميع أدوار المنصة (فلاح، مشتري، مشغل)' : 'Tous les rôles (Fournisseur, Client, Opérateur)',
+                  language === 'ar' ? 'إشعارات فورية للطلبيات' : 'Notifications push en temps réel',
+                  language === 'ar' ? 'يعمل على Android 8 وما فوق' : 'Compatible Android 8+',
+                ].map(item => (
+                  <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.88rem', color: 'rgba(255,255,255,0.85)' }}>
+                    <CheckCircle size={15} color="#4ade80" style={{ flexShrink: 0 }} /> {item}
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="https://github.com/nasserbens118-ux/nakheel/releases/download/v1.0.0-android/Nakheel-v1.0.0.apk"
+                download
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '10px',
+                  background: 'var(--accent)', color: 'white',
+                  padding: '0.9rem 1.75rem', borderRadius: 'var(--radius-md)',
+                  fontWeight: 700, fontSize: '1rem', textDecoration: 'none',
+                  boxShadow: '0 4px 20px rgba(161,98,7,0.4)',
+                  transition: 'transform 0.15s, box-shadow 0.15s',
+                }}
+                onMouseOver={e => { (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-2px)'; }}
+                onMouseOut={e => { (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(0)'; }}
+              >
+                <Download size={18} />
+                {language === 'ar' ? 'تحميل APK — مجاني' : 'Télécharger l\'APK — Gratuit'}
+              </a>
+              <p style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.45)', marginTop: '0.6rem' }}>
+                {language === 'ar' ? 'الإصدار 1.0.0 · 6.1 MB · يتطلب تفعيل "مصادر غير معروفة"' : 'v1.0.0 · 6.1 MB · Nécessite "Sources inconnues"'}
+              </p>
+            </div>
+
+            {/* Right: phone mockup */}
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <div style={{
+                width: '220px', height: '420px',
+                background: 'rgba(255,255,255,0.06)',
+                border: '2px solid rgba(255,255,255,0.15)',
+                borderRadius: '36px',
+                padding: '12px',
+                boxShadow: '0 30px 80px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)',
+                position: 'relative',
+              }}>
+                {/* Notch */}
+                <div style={{ width: '60px', height: '6px', background: 'rgba(255,255,255,0.15)', borderRadius: '999px', margin: '0 auto 12px' }} />
+                {/* Screen */}
+                <div style={{ background: 'hsl(145,63%,8%)', borderRadius: '24px', height: 'calc(100% - 30px)', padding: '1rem', display: 'flex', flexDirection: 'column', gap: '10px', overflow: 'hidden' }}>
+                  {/* App bar */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '8px', background: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <Leaf size={14} color="white" />
+                    </div>
+                    <span style={{ color: 'white', fontWeight: 700, fontSize: '0.85rem' }}>Nakheel</span>
+                    <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '3px' }}>
+                      <Wifi size={10} color="rgba(255,255,255,0.4)" />
+                    </div>
+                  </div>
+                  {/* Stat cards */}
+                  {[
+                    { label: language === 'ar' ? 'الطلبيات النشطة' : 'Demandes actives', value: '3', color: '#4ade80' },
+                    { label: language === 'ar' ? 'كمية مجموعة' : 'Quantité collectée', value: '1 200 kg', color: 'var(--accent)' },
+                    { label: language === 'ar' ? 'الرصيد' : 'Solde', value: '21 600 DA', color: '#60a5fa' },
+                  ].map(s => (
+                    <div key={s.label} style={{ background: 'rgba(255,255,255,0.06)', borderRadius: '10px', padding: '10px 12px' }}>
+                      <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.5)', marginBottom: '3px' }}>{s.label}</div>
+                      <div style={{ fontSize: '1rem', fontWeight: 800, color: s.color }}>{s.value}</div>
+                    </div>
+                  ))}
+                  {/* Notification pill */}
+                  <div style={{ marginTop: 'auto', background: 'rgba(74,222,128,0.15)', border: '1px solid rgba(74,222,128,0.3)', borderRadius: '10px', padding: '8px 10px', fontSize: '0.6rem', color: '#4ade80', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <CheckCircle size={10} /> {language === 'ar' ? 'تم قبول طلبك ✓' : 'Demande acceptée ✓'}
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
