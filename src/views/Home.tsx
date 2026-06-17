@@ -398,7 +398,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               </div>
 
               <a
-                href="https://github.com/nasserbens118-ux/nakheel/releases/download/v1.0.0-android/Nakheel-v1.0.0.apk"
+                href="https://github.com/nasserbens118-ux/nakheel/releases/download/v1.0.0-android/app-debug.apk"
                 download
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: '10px',
