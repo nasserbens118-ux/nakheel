@@ -715,3 +715,94 @@ input, select, textarea {
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }
+
+/* ── Responsive helpers ───────────────────────────────────── */
+.mobile-col {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .mobile-col { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── Mobile global overrides ─────────────────────────────── */
+@media (max-width: 640px) {
+
+  /* Container padding réduit */
+  .container { padding: 0 1rem; }
+
+  /* Cards padding réduit */
+  .card { padding: 1rem; }
+
+  /* Sections landing page */
+  section { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+
+  /* Titres hero moins grands */
+  h1 { font-size: clamp(1.6rem, 7vw, 2.4rem) !important; }
+  h2 { font-size: clamp(1.3rem, 5vw, 1.8rem) !important; }
+
+  /* Grids forcés en colonne sur mobile */
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Boutons hero en colonne */
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .hero-buttons .btn { width: 100%; justify-content: center; }
+
+  /* Tables : scroll horizontal */
+  .table-container { -webkit-overflow-scrolling: touch; }
+
+  /* Navbar compacte */
+  .navbar-inner {
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    padding: 0.5rem 1rem !important;
+    gap: 0.5rem !important;
+  }
+  .nav-links {
+    gap: 0.3rem !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+
+  /* Cacher le nom utilisateur sur mobile */
+  .nav-username { display: none !important; }
+
+  /* Textes trop longs tronqués */
+  .role-tag { max-width: 80px; overflow: hidden; text-overflow: ellipsis; }
+
+  /* Mobile section 2 colonnes → 1 colonne */
+  .mobile-section-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* Cacher le mockup téléphone sur mobile (économise de l'espace) */
+  .phone-mockup { display: none !important; }
+
+  /* Pricing grid */
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+  }
+
+  /* Stat boxes en 2 colonnes sur mobile */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Dashboard content padding */
+  .dashboard-content { padding: 0.75rem !important; }
+
+  /* Formulaires full width */
+  .form-row { flex-direction: column !important; }
+
+  /* Overflow protections */
+  * { max-width: 100%; }
+  img, video { height: auto; }
+}

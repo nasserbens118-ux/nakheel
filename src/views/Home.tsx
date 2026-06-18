@@ -93,29 +93,29 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             }}>
               {t('home.description')}
             </p>
-            <div style={{
+            <div className="hero-buttons" style={{
               display: 'flex',
               justifyContent: 'center',
               gap: '1rem',
               flexWrap: 'wrap'
             }}>
-              <button 
-                onClick={() => onNavigate('auth')} 
-                className="btn btn-accent" 
+              <button
+                onClick={() => onNavigate('auth')}
+                className="btn btn-accent"
                 style={{ padding: '0.9rem 2rem', fontSize: '1.05rem', gap: '0.5rem' }}
               >
                 {t('home.login')} {language === 'ar' ? <ArrowRight size={18} style={{ transform: 'rotate(180deg)' }} /> : <ArrowRight size={18} />}
               </button>
-              <button 
+              <button
                 onClick={() => {
                   window.dispatchEvent(new CustomEvent('open-demo-drawer'));
-                }} 
-                className="btn btn-secondary" 
-                style={{ 
-                  backgroundColor: 'rgba(255, 255, 255, 0.15)', 
-                  color: 'white', 
+                }}
+                className="btn btn-secondary"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                  color: 'white',
                   borderColor: 'rgba(255, 255, 255, 0.4)',
-                  padding: '0.9rem 2rem', 
+                  padding: '0.9rem 2rem',
                   fontSize: '1.05rem'
                 }}
               >
@@ -139,7 +139,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             </p>
           </div>
           
-          <div className="grid grid-2 grid-4" style={{ gap: '1.5rem' }}>
+          <div className="stats-grid grid grid-2 grid-4" style={{ gap: '1.5rem' }}>
             <div className="card" style={{ textAlign: 'center', padding: '2rem 1.5rem', borderLeft: language === 'ar' ? 'none' : '4px solid var(--secondary)', borderRight: language === 'ar' ? '4px solid var(--secondary)' : 'none' }}>
               <div style={{ color: 'var(--secondary)', display: 'inline-flex', padding: '0.75rem', borderRadius: '50%', backgroundColor: 'var(--primary-light)', marginBottom: '1rem' }}>
                 <Leaf size={24} />
@@ -256,7 +256,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem', maxWidth: '960px', margin: '0 auto' }}>
+          <div className="pricing-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem', maxWidth: '960px', margin: '0 auto' }}>
 
             {/* FREE */}
             <div className="card" style={{ padding: '2rem', border: '1px solid var(--neutral-border)', position: 'relative' }}>
@@ -369,7 +369,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       {/* Mobile App Section */}
       <section style={{ padding: '5rem 0', background: 'linear-gradient(135deg, hsl(145,63%,12%) 0%, hsl(145,63%,20%) 100%)', color: 'white' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center', maxWidth: '960px', margin: '0 auto' }}>
+          <div className="mobile-section-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'center', maxWidth: '960px', margin: '0 auto' }}>
 
             {/* Left: text */}
             <div>
@@ -420,7 +420,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             </div>
 
             {/* Right: phone mockup */}
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className="phone-mockup" style={{ display: 'flex', justifyContent: 'center' }}>
               <div style={{
                 width: '220px', height: '420px',
                 background: 'rgba(255,255,255,0.06)',

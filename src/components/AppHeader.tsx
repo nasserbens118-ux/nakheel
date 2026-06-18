@@ -79,7 +79,7 @@ export function AppHeader({
               }}>
                 {getRoleBadgeLabel(user.role)}
               </span>
-              <span style={{ fontWeight: 600, fontSize: '0.85rem' }}>{user.fullName}</span>
+              <span className="nav-username" style={{ fontWeight: 600, fontSize: '0.85rem' }}>{user.fullName}</span>
               <button onClick={onLogout} className="btn btn-secondary btn-sm" style={{ padding: '0.35rem 0.6rem', color: 'white', borderColor: 'rgba(255,255,255,0.3)', backgroundColor: 'transparent' }}>
                 <LogOut size={13} /> {t('nav.logout')}
               </button>
