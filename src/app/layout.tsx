@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nakheel — Plateforme d'alimentation oasienne",
-  description: "Valorisation des déchets oasiens en aliments pour bétail. Traçabilité, contrôle qualité, gestion de collecte.",
+  title: "Nakheel — Plateforme d'alimentation agricole",
+  description: "Valorisation des déchets agricoles en aliments pour bétail. Traçabilité, contrôle qualité, gestion de collecte.",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
