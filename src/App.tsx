@@ -587,17 +587,36 @@ function NakheelAppInner() {
       <div style={{
         position: 'fixed', inset: 0, display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',
-        background: 'linear-gradient(135deg, #1a3d2b 0%, #2E5A44 100%)',
-        gap: '1.5rem', zIndex: 9999,
+        background: '#ffffff',
+        gap: '1.2rem', zIndex: 9999,
       }}>
-        <Leaf size={48} style={{ color: '#a8d5b8', animation: 'pulse 1.5s ease-in-out infinite' }} />
-        <div style={{ color: '#ffffff', fontSize: '1.4rem', fontWeight: 800, letterSpacing: '2px' }}>NAKHEEL</div>
+        <img
+          src="/logo.jpeg"
+          alt="GourFeed"
+          style={{
+            width: '200px',
+            height: '200px',
+            objectFit: 'contain',
+            animation: 'fadeIn 0.6s ease-in',
+          }}
+        />
         <div style={{
-          width: '180px', height: '4px', background: 'rgba(255,255,255,0.2)',
+          color: '#2E5A44',
+          fontSize: '1.5rem',
+          fontWeight: 800,
+          letterSpacing: '1px',
+          fontFamily: 'var(--font-display)',
+          animation: 'fadeIn 0.8s ease-in',
+        }}>GourFeed</div>
+        <div style={{
+          width: '160px', height: '3px', background: 'rgba(46,90,68,0.15)',
           borderRadius: '2px', overflow: 'hidden',
+          marginTop: '0.5rem',
         }}>
           <div style={{
-            height: '100%', background: '#a8d5b8', borderRadius: '2px',
+            height: '100%',
+            background: 'linear-gradient(90deg, #2E5A44, #a8735a)',
+            borderRadius: '2px',
             animation: 'loading-bar 1.4s ease-in-out infinite',
             width: '40%',
           }} />
@@ -608,9 +627,9 @@ function NakheelAppInner() {
             50%  { transform: translateX(112.5%) scaleX(1.5); }
             100% { transform: translateX(350%) scaleX(1); }
           }
-          @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50%       { opacity: 0.5; }
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
           }
         `}</style>
       </div>
