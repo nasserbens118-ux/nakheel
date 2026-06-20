@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { UserCheck, UserX, Clock } from 'lucide-react';
 import { useLanguage } from '../../components/LanguageContext';
 import { useToast } from '../../components/Toast';
@@ -51,9 +51,9 @@ export const PendingUsers: React.FC = () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             to: user.email,
-            subject: 'Votre compte Nakheel a été approuvé ✅',
+            subject: 'Votre compte GourFeed a été approuvé ✅',
             html: `<p>Bonjour <strong>${user.fullName}</strong>,</p>
-              <p>Votre compte a été <strong>approuvé</strong> par l'équipe Nakheel. Vous pouvez maintenant vous connecter et accéder à votre espace.</p>
+              <p>Votre compte a été <strong>approuvé</strong> par l'équipe GourFeed. Vous pouvez maintenant vous connecter et accéder à votre espace.</p>
               <p>Bienvenue sur la plateforme ! 🌴</p>`,
           }),
         }).catch(() => null);
@@ -82,9 +82,9 @@ export const PendingUsers: React.FC = () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             to: user.email,
-            subject: 'Votre demande Nakheel',
+            subject: 'Votre demande GourFeed',
             html: `<p>Bonjour <strong>${user.fullName}</strong>,</p>
-              <p>Nous avons examiné votre demande d'accès à la plateforme Nakheel. Malheureusement, nous ne pouvons pas l'accepter à ce stade. Contactez-nous pour plus d'informations.</p>`,
+              <p>Nous avons examiné votre demande d'accès à la plateforme GourFeed. Malheureusement, nous ne pouvons pas l'accepter à ce stade. Contactez-nous pour plus d'informations.</p>`,
           }),
         }).catch(() => null);
       } else {

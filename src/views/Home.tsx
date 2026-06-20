@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Leaf, Sprout, ShieldCheck, ArrowRight, TrendingUp, Globe, Recycle, CheckCircle, XCircle, Star, Building2, Phone, Smartphone, Download, Wifi } from 'lucide-react';
 import { SUBSCRIPTION_PRICE_DA } from '../services/db';
 import { useLanguage } from '../components/LanguageContext';
@@ -357,10 +357,10 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           {/* Commission note */}
           <div style={{ textAlign: 'center', marginTop: '2.5rem', padding: '1rem 1.5rem', background: 'var(--neutral-light)', borderRadius: 'var(--radius-md)', maxWidth: '680px', margin: '2.5rem auto 0' }}>
             <p style={{ margin: 0, fontSize: '0.85rem', color: 'gray' }}>
-              💡 <strong style={{ color: 'var(--primary)' }}>{language === 'ar' ? 'كيف يربح نخيل ؟' : 'Comment Nakheel génère des revenus ?'}</strong>{' '}
+              💡 <strong style={{ color: 'var(--primary)' }}>{language === 'ar' ? 'كيف يربح نخيل ؟' : 'Comment GourFeed génère des revenus ?'}</strong>{' '}
               {language === 'ar'
                 ? 'اشتراك شهري Pro (15,000 د.ج) + عمولة 4% على كل طلبية مكتملة. نخيل يربح عندما تربح أنت.'
-                : 'Abonnement Pro mensuel (15 000 DA) + commission 4% sur chaque commande finalisée. Nakheel gagne quand vous gagnez.'}
+                : 'Abonnement Pro mensuel (15 000 DA) + commission 4% sur chaque commande finalisée. GourFeed gagne quand vous gagnez.'}
             </p>
           </div>
         </div>
@@ -377,7 +377,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 <Smartphone size={13} /> {language === 'ar' ? 'تطبيق أندرويد' : 'Application Android'}
               </span>
               <h2 style={{ color: 'white', fontSize: '2rem', fontWeight: 800, lineHeight: 1.2, marginBottom: '1rem' }}>
-                {language === 'ar' ? 'نخيل في جيبك' : 'Nakheel dans votre poche'}
+                {language === 'ar' ? 'نخيل في جيبك' : 'GourFeed dans votre poche'}
               </h2>
               <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '1rem', lineHeight: 1.65, marginBottom: '2rem' }}>
                 {language === 'ar'
@@ -439,7 +439,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <div style={{ width: '28px', height: '28px', borderRadius: '8px', background: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <Leaf size={14} color="white" />
                     </div>
-                    <span style={{ color: 'white', fontWeight: 700, fontSize: '0.85rem' }}>Nakheel</span>
+                    <span style={{ color: 'white', fontWeight: 700, fontSize: '0.85rem' }}>GourFeed</span>
                     <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '3px' }}>
                       <Wifi size={10} color="rgba(255,255,255,0.4)" />
                     </div>

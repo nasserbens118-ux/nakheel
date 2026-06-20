@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { ShoppingBag, MapPin, Truck, QrCode, ClipboardList } from 'lucide-react';
 import { useNakheel } from '../../components/NakheelContext';
 import { useLanguage } from '../../components/LanguageContext';
@@ -21,7 +21,7 @@ export const ClientOrders: React.FC<ClientOrdersProps> = ({ user, onTraceBatch, 
 
   const getProductName = (productId: string): string => {
     const p = products.find(prod => prod.id === productId);
-    if (!p) return 'Aliment Nakheel';
+    if (!p) return 'Aliment GourFeed';
     
     // Translate standard product names if matching
     if (language === 'ar') {
@@ -176,7 +176,7 @@ export const ClientOrders: React.FC<ClientOrdersProps> = ({ user, onTraceBatch, 
                         
                         <div style={{ flex: 1 }}>
                           <span style={{ fontSize: '0.65rem', color: 'gray', textTransform: 'uppercase', fontWeight: 700 }}>
-                            {language === 'ar' ? 'جودة نخيل' : 'Nakheel Qualité'}
+                            {language === 'ar' ? 'جودة نخيل' : 'GourFeed Qualité'}
                           </span>
                           <h4 style={{ fontSize: '0.85rem', color: 'var(--primary)', margin: '0.1rem 0' }}>
                             {language === 'ar' ? 'الدفعة المرتبطة :' : 'Lot lié :'} {firstBatchId}

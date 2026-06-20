@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Leaf, Target, Users, TrendingUp, MapPin, Mail, Phone, Award, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../components/LanguageContext';
 
@@ -55,7 +55,7 @@ export const About: React.FC<Props> = ({ onNavigate }) => {
       }}>
         <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🌴</div>
         <h1 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.2 }}>
-          {ar ? 'نخيل — الاقتصاد الدائري للواحات الجزائرية' : 'Nakheel — L\'Économie Circulaire des Oasis Algériennes'}
+          {ar ? 'نخيل — الاقتصاد الدائري للواحات الجزائرية' : 'GourFeed — L\'Économie Circulaire des Oasis Algériennes'}
         </h1>
         <p style={{ fontSize: '1.05rem', opacity: 0.9, maxWidth: '600px', margin: '0 auto 1.5rem' }}>
           {ar
@@ -89,7 +89,7 @@ export const About: React.FC<Props> = ({ onNavigate }) => {
             <p style={{ color: 'var(--neutral-dark)', lineHeight: 1.7, fontSize: '0.9rem' }}>
               {ar
                 ? 'في نفس الوقت، يعاني مربو المواشي في المناطق المجاورة من نقص العلف وارتفاع أسعاره. يغيب التواصل بين الطرفين، ولا توجد سلسلة إمداد منظَّمة تربط الفلاح بالمربي.'
-                : 'Dans le même temps, les éleveurs des régions voisines souffrent d\'un manque d\'aliment et de prix élevés. La chaîne d\'approvisionnement entre producteur et éleveur est absente. Nakheel crée ce maillon manquant.'}
+                : 'Dans le même temps, les éleveurs des régions voisines souffrent d\'un manque d\'aliment et de prix élevés. La chaîne d\'approvisionnement entre producteur et éleveur est absente. GourFeed crée ce maillon manquant.'}
             </p>
           </div>
         </div>
@@ -98,7 +98,7 @@ export const About: React.FC<Props> = ({ onNavigate }) => {
       {/* How it works */}
       <div style={{ marginBottom: '2rem' }}>
         <h2 style={{ color: 'var(--primary)', fontSize: '1.25rem', marginBottom: '1.25rem', textAlign: 'center' }}>
-          {ar ? 'كيف يعمل نخيل ؟' : 'Comment fonctionne Nakheel ?'}
+          {ar ? 'كيف يعمل نخيل ؟' : 'Comment fonctionne GourFeed ?'}
         </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem' }}>
           {steps.map((s, i) => (
@@ -173,7 +173,7 @@ export const About: React.FC<Props> = ({ onNavigate }) => {
             <div style={{ color: 'gray', lineHeight: 1.6 }}>
               {ar
                 ? 'نخيل تتقاضى 4% من قيمة كل طلبية علف مُوصَّلة. نخيل تكسب عندما يكسب الجميع.'
-                : 'Nakheel prélève 4 % du montant de chaque commande livrée. Nakheel gagne quand tout le monde gagne.'}
+                : 'GourFeed prélève 4 % du montant de chaque commande livrée. GourFeed gagne quand tout le monde gagne.'}
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@ export const About: React.FC<Props> = ({ onNavigate }) => {
           </span>
         </div>
         <p style={{ fontSize: '0.75rem', color: '#aaa', marginTop: '1rem' }}>
-          {ar ? 'نخيل — شركة ناشئة جزائرية، 2025' : 'Nakheel — Startup algérienne, 2025'} • Biskra, Algérie
+          {ar ? 'نخيل — شركة ناشئة جزائرية، 2025' : 'GourFeed — Startup algérienne, 2025'} • Biskra, Algérie
         </p>
       </div>
 

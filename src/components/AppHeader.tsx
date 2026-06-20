@@ -26,7 +26,7 @@ export function AppHeader({
       <div className="container navbar-inner">
         <div className="logo-container" onClick={() => onNavigate('home')}>
           <Leaf className="logo-icon" size={24} style={{ transform: 'rotate(-10deg)', fill: 'var(--accent)' }} />
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800 }}>Nakheel</span>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800 }}>GourFeed</span>
         </div>
 
         <div className="nav-links">

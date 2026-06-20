@@ -1,4 +1,4 @@
-// Nakheel — Browser Notification Service (free, no external API)
+﻿// GourFeed — Browser Notification Service (free, no external API)
 
 export type NotifType = 'collection' | 'order' | 'quality' | 'complaint' | 'payment';
 
@@ -42,7 +42,7 @@ export async function notifyCollectionScheduled(supplierName: string, date: stri
   if (!(await requestPermission())) return;
   show({
     type:  'collection',
-    title: language === 'ar' ? '🚚 تأكيد موعد الجمع — نخيل' : '🚚 Collecte programmée — Nakheel',
+    title: language === 'ar' ? '🚚 تأكيد موعد الجمع — نخيل' : '🚚 Collecte programmée — GourFeed',
     body:  language === 'ar'
       ? `موعد جمع مخلفات ${supplierName} مؤكد بتاريخ ${date}.`
       : `La collecte des déchets de ${supplierName} est confirmée pour le ${date}.`,
@@ -96,7 +96,7 @@ export async function notifyComplaintReceived(clientName: string, language: 'fr'
   if (!(await requestPermission())) return;
   show({
     type:  'complaint',
-    title: language === 'ar' ? '📬 شكوى جديدة — نخيل' : '📬 Nouvelle réclamation — Nakheel',
+    title: language === 'ar' ? '📬 شكوى جديدة — نخيل' : '📬 Nouvelle réclamation — GourFeed',
     body:  language === 'ar'
       ? `${clientName} أرسل شكوى جديدة تتطلب المتابعة.`
       : `${clientName} a soumis une réclamation. Veuillez la traiter.`,

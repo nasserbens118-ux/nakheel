@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+﻿import React, { useState, useRef } from 'react';
 import { Camera, MapPin, Send, CheckCircle, Loader, Upload, X, Locate } from 'lucide-react';
 import { useNakheel } from '../../components/NakheelContext';
 import { useLanguage } from '../../components/LanguageContext';
@@ -88,7 +88,7 @@ export const DeclareWaste: React.FC<DeclareWasteProps> = ({ user, onSuccess }) =
       setUploadProgress(80);
       if (upErr) {
         // Fallback to base64 if bucket not configured yet
-        console.warn('[Nakheel] Supabase Storage upload failed, storing base64:', upErr.message);
+        console.warn('[GourFeed] Supabase Storage upload failed, storing base64:', upErr.message);
         return photoPreview ?? undefined;
       }
 

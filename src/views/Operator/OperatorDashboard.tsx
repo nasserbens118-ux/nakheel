@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Truck, Layers, Award, Database, QrCode, PlusCircle, CheckCircle, AlertTriangle, FileText, MapPin, Lock, Star } from 'lucide-react';
 import { useNakheel } from '../../components/NakheelContext';
 import { useLanguage } from '../../components/LanguageContext';
@@ -47,7 +47,7 @@ export const OperatorDashboard: React.FC<OperatorDashboardProps> = ({ user }) =>
   const [qaNotes, setQaNotes] = useState('Le lot de production présente un profil biochimique optimal.');
 
   // Driver / Vehicle for pickup scheduling
-  const [driverName, setDriverName]   = useState('Chauffeur Nakheel');
+  const [driverName, setDriverName]   = useState('Chauffeur GourFeed');
   const [vehicleRef, setVehicleRef]   = useState('16-TKC-09');
 
   // --- QR MODAL ---

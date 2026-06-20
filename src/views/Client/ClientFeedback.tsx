@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Star, MessageSquare, CheckCircle, AlertTriangle, Send } from 'lucide-react';
 import { useNakheel } from '../../components/NakheelContext';
 import { useLanguage } from '../../components/LanguageContext';
@@ -211,7 +211,7 @@ export const ClientFeedback: React.FC<ClientFeedbackProps> = ({ user }) => {
                       color: 'var(--neutral-dark)'
                     }}>
                       <div style={{ fontWeight: 700, color: 'var(--primary)', marginBottom: '0.15rem', display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
-                        <MessageSquare size={11} /> {language === 'ar' ? 'رد إدارة نخيل :' : 'Réponse Nakheel :'}
+                        <MessageSquare size={11} /> {language === 'ar' ? 'رد إدارة نخيل :' : 'Réponse GourFeed :'}
                       </div>
                       {c.reply}
                     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { QrCode, PlusCircle, CheckCircle, AlertTriangle, FileText, Download, Award } from 'lucide-react';
 import { exportProductionBatches } from '../../services/exportCsv';
 import { useNakheel } from '../../components/NakheelContext';
@@ -509,7 +509,7 @@ export const ManageBatches: React.FC = () => {
               style={{ display: 'block', margin: '0 auto 1rem auto', borderRadius: 'var(--radius-sm)', border: '3px solid var(--primary)' }}
             />
             <h4 style={{ color: 'var(--primary)', marginBottom: '0.2rem', fontSize: '0.95rem' }}>
-              {language === 'ar' ? 'كيس علف نخيل' : "Sac d'Aliment Nakheel"}
+              {language === 'ar' ? 'كيس علف نخيل' : "Sac d'Aliment GourFeed"}
             </h4>
             <code style={{ fontSize: '0.7rem', color: 'gray', display: 'block', marginBottom: '1.25rem' }}>
               nakheel-trace.dz/batch/{activeQRCode}

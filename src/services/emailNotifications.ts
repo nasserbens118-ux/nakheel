@@ -1,4 +1,4 @@
-// Transactional email service via Resend (https://resend.com — 100 emails/day free)
+﻿// Transactional email service via Resend (https://resend.com — 100 emails/day free)
 // Falls back silently if RESEND_API_KEY is not configured.
 
 interface EmailPayload {
@@ -39,7 +39,7 @@ function baseTemplate(title: string, body: string): string {
           ${body}
           <hr style="border:none;border-top:1px solid #e8e8e8;margin:28px 0">
           <p style="color:#999;font-size:11px;margin:0">
-            Cet email a été envoyé automatiquement par la plateforme Nakheel.<br>
+            Cet email a été envoyé automatiquement par la plateforme GourFeed.<br>
             Ne pas répondre directement à cet email.
           </p>
         </td></tr>
@@ -59,7 +59,7 @@ export async function emailOrderConfirmed(
 ): Promise<void> {
   const subject = language === 'ar'
     ? `نخيل — تأكيد طلبيتك رقم ${orderId}`
-    : `Nakheel — Confirmation de votre commande ${orderId}`;
+    : `GourFeed — Confirmation de votre commande ${orderId}`;
 
   const body = `
     <p style="color:#444;font-size:15px">Bonjour <strong>${clientName}</strong>,</p>
@@ -86,7 +86,7 @@ export async function emailCollectionScheduled(
 ): Promise<void> {
   const subject = language === 'ar'
     ? `نخيل — تأكيد موعد جمع النفايات بتاريخ ${scheduledDate}`
-    : `Nakheel — Collecte programmée le ${scheduledDate}`;
+    : `GourFeed — Collecte programmée le ${scheduledDate}`;
 
   const body = `
     <p style="color:#444;font-size:15px">Bonjour <strong>${supplierName}</strong>,</p>
@@ -98,7 +98,7 @@ export async function emailCollectionScheduled(
       <tr><td style="color:#666;font-size:14px;padding-top:8px">Wilaya :</td><td style="font-weight:700;padding-top:8px">${wilaya}</td></tr>
     </table>
     <p style="color:#444;font-size:14px">
-      Merci de préparer les déchets secs et triés. L'équipe logistique Nakheel sera sur place à l'heure convenue.
+      Merci de préparer les déchets secs et triés. L'équipe logistique GourFeed sera sur place à l'heure convenue.
     </p>`;
 
   await sendEmail({ to, subject, html: baseTemplate(subject, body) });
@@ -114,7 +114,7 @@ export async function emailPaymentConfirmed(
 ): Promise<void> {
   const subject = language === 'ar'
     ? `نخيل — تأكيد استلام الدفع للطلبية ${orderId}`
-    : `Nakheel — Paiement reçu pour la commande ${orderId}`;
+    : `GourFeed — Paiement reçu pour la commande ${orderId}`;
 
   const body = `
     <p style="color:#444;font-size:15px">Bonjour <strong>${clientName}</strong>,</p>
@@ -143,7 +143,7 @@ export async function emailQualityResult(
   const approved = decision === 'accepté';
   const subject = language === 'ar'
     ? `نخيل — نتيجة فحص الجودة للدفعة ${batchNumber}`
-    : `Nakheel — Résultat qualité Lot ${batchNumber}`;
+    : `GourFeed — Résultat qualité Lot ${batchNumber}`;
 
   const statusColor = approved ? '#27ae60' : '#e74c3c';
   const statusLabel = approved ? '✅ Accepté' : `⚠️ ${decision}`;
@@ -160,7 +160,7 @@ export async function emailQualityResult(
     <p style="color:#444;font-size:14px">
       ${approved
         ? 'Vos déchets palmiers ont passé le contrôle qualité avec succès. Merci pour la qualité de votre collecte.'
-        : 'Des ajustements sont nécessaires. L\'équipe technique Nakheel vous contactera pour les détails.'}
+        : 'Des ajustements sont nécessaires. L\'équipe technique GourFeed vous contactera pour les détails.'}
     </p>`;
 
   await sendEmail({ to, subject, html: baseTemplate(subject, body) });

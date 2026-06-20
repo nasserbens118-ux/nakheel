@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Truck, ShieldCheck, Package, CheckCircle, CreditCard, Download } from 'lucide-react';
 import { exportOrders } from '../../services/exportCsv';
 import { useNakheel } from '../../components/NakheelContext';
@@ -162,7 +162,7 @@ export const ManageOrders: React.FC = () => {
                       <div style={{ fontSize: '0.8rem', fontWeight: 700 }}>
                         {o.deliveryMethod === 'pickup' 
                           ? (language === 'ar' ? 'استلام من المستودع' : 'Retrait Dépôt') 
-                          : (language === 'ar' ? 'توصيل للمزرعة' : 'Livraison Nakheel')}
+                          : (language === 'ar' ? 'توصيل للمزرعة' : 'Livraison GourFeed')}
                       </div>
                       <div style={{ fontSize: '0.75rem', color: 'gray' }}>📍 {o.deliveryLocation}</div>
                     </td>
@@ -321,11 +321,11 @@ export const ManageOrders: React.FC = () => {
               <strong style={{ color: 'var(--accent)' }}>{paymentOrder.totalAmount.toLocaleString()} DA</strong>
             </p>
             <div style={{ backgroundColor: 'var(--neutral-light)', borderRadius: 'var(--radius-sm)', padding: '0.85rem', marginBottom: '1.25rem', fontSize: '0.8rem', borderInlineStart: '3px solid var(--accent)' }}>
-              <strong>{language === 'ar' ? 'معلومات الحساب البنكي لنخيل :' : 'Coordonnées bancaires Nakheel :'}</strong>
+              <strong>{language === 'ar' ? 'معلومات الحساب البنكي لنخيل :' : 'Coordonnées bancaires GourFeed :'}</strong>
               <div style={{ marginTop: '0.35rem', lineHeight: 1.7 }}>
                 <div>CPA — Agence Biskra 001</div>
                 <div>RIB : <span style={{ fontFamily: 'monospace' }}>007 00100 0000123456 97</span></div>
-                <div>{language === 'ar' ? 'المستفيد: مؤسسة نخيل للأعلاف الواحاتية' : 'Bénéficiaire : SPA Nakheel Aliments'}</div>
+                <div>{language === 'ar' ? 'المستفيد: مؤسسة نخيل للأعلاف الواحاتية' : 'Bénéficiaire : SPA GourFeed Aliments'}</div>
               </div>
             </div>
             <div className="form-group" style={{ marginBottom: '1.25rem' }}>

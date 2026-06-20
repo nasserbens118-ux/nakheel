@@ -1,4 +1,4 @@
-// New Enterprise Data Models for Nakheel Platform
+﻿// New Enterprise Data Models for GourFeed Platform
 
 export type UserRole = 'admin' | 'operator' | 'supplier' | 'client';
 export type UserStatus = 'active' | 'inactive' | 'pending';

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+﻿import React, { useMemo } from 'react';
 import { Leaf, Award, BarChart2, AlertCircle, TrendingUp, Package, ShieldAlert, DollarSign, Users, Percent } from 'lucide-react';
 import { useNakheel } from '../../components/NakheelContext';
 import { useLanguage } from '../../components/LanguageContext';
@@ -79,7 +79,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onSubTabChange }
     <div className="animate-fade-in">
       <div style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.6rem', color: 'var(--primary)' }}>
-          {language === 'ar' ? 'لوحة المراقبة والتحكم نخيل' : 'Console de Supervision Nakheel'}
+          {language === 'ar' ? 'لوحة المراقبة والتحكم نخيل' : 'Console de Supervision GourFeed'}
         </h2>
         <p style={{ color: 'gray', fontSize: '0.9rem' }}>
           {language === 'ar' ? 'متابعة اللوجستيات، الإنتاج ومطابقة الجودة للشركة الناشئة' : 'Suivi logistique, production et conformité qualité de la startup'}
@@ -148,7 +148,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onSubTabChange }
 
       </div>
 
-      {/* ── Revenus Nakheel ──────────────────────────────────────────────── */}
+      {/* ── Revenus GourFeed ──────────────────────────────────────────────── */}
       {(() => {
         const completedOrders = orders.filter(o => o.status === 'delivered' || (o.status as string) === 'shipped');
         const totalCommissions = completedOrders.reduce((sum, o) => sum + (o.commissionAmount ?? o.totalAmount * 0.04), 0);
@@ -160,7 +160,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onSubTabChange }
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
               <DollarSign size={16} color="#8e44ad" />
               <span style={{ fontWeight: 700, fontSize: '0.85rem', color: '#8e44ad', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                {language === 'ar' ? 'إيرادات نخيل (النموذج الاقتصادي)' : 'Revenus Nakheel — Modèle Économique'}
+                {language === 'ar' ? 'إيرادات نخيل (النموذج الاقتصادي)' : 'Revenus GourFeed — Modèle Économique'}
               </span>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem' }}>
@@ -194,7 +194,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onSubTabChange }
                   {Math.round(totalNakheel).toLocaleString('fr-DZ')} DA
                 </div>
                 <div style={{ fontSize: '0.72rem', color: '#8e44ad', fontWeight: 600 }}>
-                  {language === 'ar' ? 'إيراد نخيل هذا الشهر' : 'Revenu Nakheel ce mois'}
+                  {language === 'ar' ? 'إيراد نخيل هذا الشهر' : 'Revenu GourFeed ce mois'}
                 </div>
               </div>
             </div>

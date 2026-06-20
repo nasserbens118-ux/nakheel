@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Cpu, Activity, Compass, Award, AlertCircle, TrendingUp, Package, Brain, CheckCircle } from 'lucide-react';
 import { useNakheel } from '../../components/NakheelContext';
 import { useLanguage } from '../../components/LanguageContext';
@@ -139,7 +139,7 @@ export const AIDecisions: React.FC = () => {
     <div className="animate-fade-in">
       <div style={{ marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.4rem', color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <Cpu style={{ color: 'var(--accent)' }} /> {language === 'ar' ? 'نظام دعم القرار نخيل' : "Système d'Aide à la Décision Nakheel"}
+          <Cpu style={{ color: 'var(--accent)' }} /> {language === 'ar' ? 'نظام دعم القرار نخيل' : "Système d'Aide à la Décision GourFeed"}
         </h2>
         <p style={{ color: 'gray', fontSize: '0.9rem' }}>
           {language === 'ar' ? 'متابعة الجودة التنبؤية، توقعات المبيعات والجدولة الآلية للإنتاج' : "Supervision prédictive de la qualité, prévisions de vente et planification automatisée de la production"}

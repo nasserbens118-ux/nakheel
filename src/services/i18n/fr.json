@@ -9,7 +9,7 @@
     "role_supplier": "Producteur Agricole",
     "role_client": "Éleveur (Client)",
     "footer_slogan": "Valorisation des Déchets Agricoles • Économie Circulaire • Traçabilité QR Code • Contrôle Qualité",
-    "footer_copy": "Nakheel. Transformer les déchets de palmier en valeur durable."
+    "footer_copy": "GourFeed. Transformer les déchets de palmier en valeur durable."
   },
   "sidebar": {
     "dashboard": "Tableau de Bord",
@@ -34,10 +34,10 @@
   "home": {
     "tag": "Économie Circulaire Agricole",
     "slogan": "Transformer les déchets de palmier en valeur durable",
-    "description": "Nakheel est une plateforme d'économie circulaire qui valorise les palmes, fibres, noyaux et dattes déclassées en nutrition animale locale, hautement nutritive et traçable par QR Code.",
+    "description": "GourFeed est une plateforme d'économie circulaire qui valorise les palmes, fibres, noyaux et dattes déclassées en nutrition animale locale, hautement nutritive et traçable par QR Code.",
     "login": "Se Connecter",
     "interactive_demo": "🚀 Démo Interactive",
-    "impact_title": "Impact Temps Réel de Nakheel",
+    "impact_title": "Impact Temps Réel de GourFeed",
     "impact_desc": "Indicateurs consolidés depuis notre réseau de partenaires agricoles",
     "metric_waste": "Déchets de Palmier Collectés",
     "metric_waste_sub": "Palmes, noyaux et dattes sauvées du feu",
@@ -48,7 +48,7 @@
     "metric_revenues": "Revenus des Agriculteurs",
     "metric_revenues_sub": "Soutien direct aux exploitants agricoles",
     "cycle_title": "Notre Cycle de Valorisation Circulaire",
-    "cycle_desc": "Comment Nakheel transforme un défi écologique agricole en une opportunité de développement durable.",
+    "cycle_desc": "Comment GourFeed transforme un défi écologique agricole en une opportunité de développement durable.",
     "card_circular": "Économie Circulaire",
     "card_circular_desc": "Valorisation complète des résidus de palmier (palmes sèches, fibres, noyaux, dattes déclassées) réduisant le brûlage à l'air libre.",
     "card_nutrition": "Nutrition Animale",
@@ -58,11 +58,11 @@
     "card_ai": "Aide à la Décision",
     "card_ai_desc": "Optimisation continue des formules de broyage, estimation des scores de qualité et prévisions de stocks.",
     "demo_title": "Mode Démo Intégré & Simulation",
-    "demo_desc": "Pour faciliter l'évaluation du MVP, vous pouvez basculer instantanément entre les différents espaces (Fournisseur agricole, Client éleveur, Opérateur, Admin Nakheel) ou créer votre propre compte.",
+    "demo_desc": "Pour faciliter l'évaluation du MVP, vous pouvez basculer instantanément entre les différents espaces (Fournisseur agricole, Client éleveur, Opérateur, Admin GourFeed) ou créer votre propre compte.",
     "demo_button": "Se Connecter / S'Inscrire"
   },
   "auth": {
-    "title": "Nakheel Platform MVP",
+    "title": "GourFeed Platform MVP",
     "presentation": "La solution digitale complète de valorisation des résidus du palmier-dattier en alimentation de bétail locale à haute valeur nutritive en Algérie.",
     "feature_ai": "Diagnostic Qualité",
     "feature_ai_sub": "Calcul immédiat du score physico-chimique des matières collectées.",
@@ -133,7 +133,7 @@
     "btn_cancel": "Annuler la demande",
     "declare_title": "Déclarer un Nouveau Tas de Déchets",
     "declare_success": "Déclaration Enregistrée !",
-    "declare_success_desc": "Votre demande est en cours de validation par le service logistique de Nakheel.",
+    "declare_success_desc": "Votre demande est en cours de validation par le service logistique de GourFeed.",
     "error_qty": "Veuillez entrer une quantité brute de déchets valide supérieure à 0 kg.",
     "error_loc": "Veuillez renseigner le lieu de collecte (commune ou exploitation agricole).",
     "error_date": "Veuillez choisir une date de disponibilité.",
@@ -158,7 +158,7 @@
     "cart_qty": "Quantité totale",
     "cart_total": "Montant Total",
     "cart_delivery_method": "Méthode de réception",
-    "cart_delivery_pickup": "Retrait au dépôt Nakheel",
+    "cart_delivery_pickup": "Retrait au dépôt GourFeed",
     "cart_delivery_home": "Livraison à votre exploitation",
     "cart_delivery_address": "Adresse de livraison complète en Algérie",
     "cart_btn_order": "Valider la commande (Paiement à la livraison)",
@@ -279,7 +279,7 @@
     "toast_qa_saved": "Bulletin d'analyses labo enregistré. Le stock disponible a été mis à jour."
   },
   "admin": {
-    "dash_title": "Portail d'Administration Nakheel",
+    "dash_title": "Portail d'Administration GourFeed",
     "dash_desc": "Pilotage stratégique, logistique de collecte, contrôle des formules de fabrication et outil d'aide à la décision par Intelligence Artificielle.",
     "stats_pending_waste": "Collectes en attente",
     "stats_pending_orders": "Commandes à livrer",

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { QrCode, ShieldCheck, MapPin, Calendar, Award, RefreshCw, Leaf, HeartHandshake, Printer } from 'lucide-react';
 import { useNakheel } from '../../components/NakheelContext';
 import { useLanguage } from '../../components/LanguageContext';
@@ -80,7 +80,7 @@ export const BatchTraceability: React.FC<BatchTraceabilityProps> = ({ initialBat
     }, 800);
 
     setTimeout(() => {
-      setScanStatus(language === 'ar' ? 'تم التحقق من توقيع تتبع نخيل المعتمد !' : 'Signature de traçabilité Nakheel vérifiée !');
+      setScanStatus(language === 'ar' ? 'تم التحقق من توقيع تتبع نخيل المعتمد !' : 'Signature de traçabilité GourFeed vérifiée !');
     }, 1600);
 
     setTimeout(() => {
@@ -123,7 +123,7 @@ export const BatchTraceability: React.FC<BatchTraceabilityProps> = ({ initialBat
         <div className="card" style={{ textAlign: 'center', padding: '3rem 2rem' }}>
           <h2 style={{ color: 'var(--primary)', marginBottom: '1rem' }}>{language === 'ar' ? 'مسح كيس العلف المستلم' : "Scanner un Sac d'Aliment"}</h2>
           <p style={{ color: 'gray', maxWidth: '500px', margin: '0 auto 2rem auto', fontSize: '0.95rem' }}>
-            {language === 'ar' ? 'قم بتقريب رمز QR المطبوع على كيس علف نخيل من عدسة هاتفك الذكي أو قم بمحاكاة المسح من الأزرار بالأسفل.' : 'Approchez l\'étiquette QR imprimée sur le sac Nakheel de l\'objectif de votre smartphone ou simulez la lecture ci-dessous.'}
+            {language === 'ar' ? 'قم بتقريب رمز QR المطبوع على كيس علف نخيل من عدسة هاتفك الذكي أو قم بمحاكاة المسح من الأزرار بالأسفل.' : 'Approchez l\'étiquette QR imprimée sur le sac GourFeed de l\'objectif de votre smartphone ou simulez la lecture ci-dessous.'}
           </p>
 
           {isScanning ? (
@@ -157,7 +157,7 @@ export const BatchTraceability: React.FC<BatchTraceabilityProps> = ({ initialBat
               <div style={{ margin: '0 auto 2.5rem auto', display: 'inline-block' }}>
                 <img
                   src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent('https://nakheel-trace.dz/scan')}&color=2E5A44&bgcolor=ffffff`}
-                  alt="QR Code Nakheel"
+                  alt="QR Code GourFeed"
                   width={180}
                   height={180}
                   style={{ borderRadius: 'var(--radius-md)', border: '2px solid var(--neutral-border)', display: 'block' }}
@@ -192,7 +192,7 @@ export const BatchTraceability: React.FC<BatchTraceabilityProps> = ({ initialBat
       ) : !currentBatch ? (
         <div className="card" style={{ textAlign: 'center', padding: '3rem 2rem' }}>
           <h2 style={{ color: 'var(--status-rejected)', marginBottom: '1rem' }}>{t('client.trace_not_found')}</h2>
-          <p style={{ color: 'gray', marginBottom: '1.5rem' }}>{language === 'ar' ? 'رمز QR الممسوح غير مسجل في شبكة تتبع نخيل اللامركزية.' : 'Le QR code scanné n\'est pas répertorié dans la traçabilité décentralisée Nakheel.'}</p>
+          <p style={{ color: 'gray', marginBottom: '1.5rem' }}>{language === 'ar' ? 'رمز QR الممسوح غير مسجل في شبكة تتبع نخيل اللامركزية.' : 'Le QR code scanné n\'est pas répertorié dans la traçabilité décentralisée GourFeed.'}</p>
           <button onClick={() => setSelectedBatchId(null)} className="btn btn-primary btn-sm">
             {language === 'ar' ? 'إعادة المحاولة' : 'Réessayer de scanner'}
           </button>
@@ -212,7 +212,7 @@ export const BatchTraceability: React.FC<BatchTraceabilityProps> = ({ initialBat
                 color: 'var(--accent)', fontWeight: 700, fontSize: '0.8rem', 
                 textTransform: 'uppercase', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' 
               }}>
-                <ShieldCheck size={14} /> {language === 'ar' ? 'التتبع اللامركزي ومطابقة الجودة نخيل' : 'Traçabilité Décentralisée & Qualité Nakheel'}
+                <ShieldCheck size={14} /> {language === 'ar' ? 'التتبع اللامركزي ومطابقة الجودة نخيل' : 'Traçabilité Décentralisée & Qualité GourFeed'}
               </span>
               <h2 style={{ color: 'white', fontSize: '1.8rem', margin: '0.25rem 0 0.5rem 0' }}>
                 {t('client.trace_batch_info')} {currentBatch.batchNumber}

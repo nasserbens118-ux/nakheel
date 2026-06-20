@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { CheckCircle, XCircle, Play, RefreshCw, Shield, Database, Sprout } from 'lucide-react';
 import { useNakheel } from '../components/NakheelContext';
 import { useLanguage } from '../components/LanguageContext';
@@ -438,7 +438,7 @@ export const TestConsole: React.FC = () => {
           <p style={{ color: 'gray', fontSize: '0.85rem', margin: '0.25rem 0 0 0' }}>
             {language === 'ar' 
               ? "لوحة التقييم الآلي للتحقق من سلامة منطق منصة نخيل (12 تأكيداً رئيسياً)." 
-              : "Console d'évaluation automatisée de conformité logique de la plateforme Nakheel (12 assertions clés)."}
+              : "Console d'évaluation automatisée de conformité logique de la plateforme GourFeed (12 assertions clés)."}
           </p>
         </div>
         

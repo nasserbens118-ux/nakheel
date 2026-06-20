@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+﻿import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 
 const genId = () => crypto.randomUUID().split('-')[0].toUpperCase();
 
@@ -121,7 +121,7 @@ export const NakheelProvider: React.FC<{ children: React.ReactNode }> = ({ child
         setOrders(ord); setOrderItems(oi); setComplaints(comp);
         setAiPredictions(ai); setMetrics(met);
       } catch (err) {
-        console.error('[Nakheel] Supabase load failed, falling back to localStorage', err);
+        console.error('[GourFeed] Supabase load failed, falling back to localStorage', err);
         loadFromLocalStorage();
       }
     } else {

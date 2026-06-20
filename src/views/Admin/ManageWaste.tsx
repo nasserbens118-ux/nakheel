@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { MapPin, Truck, Award, Download } from 'lucide-react';
 import { exportWasteRequests } from '../../services/exportCsv';
 import { useNakheel } from '../../components/NakheelContext';
@@ -458,7 +458,7 @@ export const ManageWaste: React.FC = () => {
         }}>
           <div className="card animate-fade-in" style={{ maxWidth: '420px', width: '100%', background: 'white' }}>
             <h3 style={{ marginBottom: '1rem', color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '1.15rem' }}>
-              <Truck size={18} style={{ color: 'var(--accent)' }} /> {language === 'ar' ? 'جدولة عملية الجمع نخيل' : 'Planifier la Collecte Nakheel'}
+              <Truck size={18} style={{ color: 'var(--accent)' }} /> {language === 'ar' ? 'جدولة عملية الجمع نخيل' : 'Planifier la Collecte GourFeed'}
             </h3>
             
             <p style={{ fontSize: '0.85rem', color: 'gray', marginBottom: '1.25rem' }}>

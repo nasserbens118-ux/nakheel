@@ -1,4 +1,4 @@
-// Nakheel — CSV export utility (browser-native, no external dependency)
+﻿// GourFeed — CSV export utility (browser-native, no external dependency)
 
 type Row = Record<string, string | number | boolean | null | undefined>;
 

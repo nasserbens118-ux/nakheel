@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+﻿import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { Home } from './views/Home';
 import { Auth } from './views/Auth';
@@ -226,7 +226,7 @@ function NakheelAppInner() {
           <p style={{ color: 'gray', lineHeight: 1.6, marginBottom: '1.5rem' }}>
             {language === 'ar'
               ? 'تم استلام طلبك. سيقوم فريق نخيل بمراجعته وإرسال إشعار إلى بريدك الإلكتروني خلال 24 ساعة.'
-              : 'Votre demande a bien été reçue. L\'équipe Nakheel va l\'examiner et vous enverrez une confirmation par email sous 24h.'}
+              : 'Votre demande a bien été reçue. L\'équipe GourFeed va l\'examiner et vous enverrez une confirmation par email sous 24h.'}
           </p>
           <div style={{ background: 'var(--primary-light)', borderRadius: 'var(--radius-md)', padding: '0.75rem', fontSize: '0.85rem', color: 'var(--primary)', marginBottom: '1.5rem' }}>
             📧 {user.email}
@@ -659,7 +659,7 @@ function NakheelAppInner() {
         <div className="container footer-inner">
           <div className="footer-logo">
             <Leaf size={16} style={{ color: 'var(--accent)', transform: 'rotate(-10deg)' }} />
-            <span>Nakheel</span>
+            <span>GourFeed</span>
           </div>
           <div style={{ display: 'flex', gap: '0.85rem', fontSize: '0.8rem', color: '#8c887e', flexWrap: 'wrap', justifyContent: 'center' }}>
             <span>{t('nav.footer_slogan')}</span>

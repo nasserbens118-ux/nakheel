@@ -1,4 +1,4 @@
-// Nakheel AI Decision Support System Simulation
+﻿// GourFeed AI Decision Support System Simulation
 // Compatible with Google AI Studio prompt structures and local heuristic fallbacks
 
 export interface OptimizeRecipeRequest {
@@ -205,7 +205,7 @@ export class NakheelAIService {
     }
 
     if (riskScore <= 25) {
-      recommendedActions.push("Paramètres optimaux. Procéder à l'ensachage standard sous label 'Nakheel Qualité'.");
+      recommendedActions.push("Paramètres optimaux. Procéder à l'ensachage standard sous label 'GourFeed Qualité'.");
     }
 
     return {

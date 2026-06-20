@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 interface Props { children: React.ReactNode; }
 interface State { hasError: boolean; error: Error | null; }
@@ -14,7 +14,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
   }
 
   componentDidCatch(error: Error, info: React.ErrorInfo) {
-    console.error('[Nakheel] Erreur non gérée:', error, info.componentStack);
+    console.error('[GourFeed] Erreur non gérée:', error, info.componentStack);
   }
 
   render() {

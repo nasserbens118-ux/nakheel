@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { ShoppingBag, CheckCircle } from 'lucide-react';
 import { useNakheel } from '../../components/NakheelContext';
 import { useLanguage } from '../../components/LanguageContext';
@@ -88,7 +88,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ user, onOrderSuc
         quantityKg: qty
       }],
       deliveryType,
-      deliveryType === 'delivery' ? deliveryAddress.trim() : 'Dépôt Central Nakheel (Tolga)',
+      deliveryType === 'delivery' ? deliveryAddress.trim() : 'Dépôt Central GourFeed (Tolga)',
       commissionAmount
     );
 

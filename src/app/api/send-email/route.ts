@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+﻿import { NextRequest, NextResponse } from 'next/server';
 
 // POST /api/send-email
 // Body: { to: string, subject: string, html: string }
@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
   }
 
   const fromEmail = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev';
-  const fromName  = process.env.RESEND_FROM_NAME  ?? 'Nakheel';
+  const fromName  = process.env.RESEND_FROM_NAME  ?? 'GourFeed';
 
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',

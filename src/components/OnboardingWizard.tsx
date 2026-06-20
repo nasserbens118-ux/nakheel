@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { User } from '../services/db';
 import { useLanguage } from './LanguageContext';
 
@@ -54,7 +54,7 @@ export function OnboardingWizard({ user, onComplete }: Props) {
           title={ar ? `أهلاً بك يا ${firstName} 👋` : `Bienvenue, ${firstName} ! 👋`}
           body={ar
             ? 'أنت الآن منتجاً واحاتياً شريكاً في منصة نخيل. ستتمكن من تصريح مخلفاتك وتتبع عمليات الجمع والحصول على تعويض عادل.'
-            : 'Vous rejoignez la plateforme Nakheel en tant que Producteur Oasien. Vous allez pouvoir déclarer vos résidus de palmier, suivre les collectes et recevoir une rémunération équitable.'
+            : 'Vous rejoignez la plateforme GourFeed en tant que Producteur Oasien. Vous allez pouvoir déclarer vos résidus de palmier, suivre les collectes et recevoir une rémunération équitable.'
           }
           tip={ar ? '💡 كل كيلوغرام مُجمع = 15 د.ج في حسابك' : '💡 Chaque kg collecté = 15 DA crédité sur votre compte'}
         />
@@ -91,7 +91,7 @@ export function OnboardingWizard({ user, onComplete }: Props) {
           title={ar ? `أهلاً بك يا ${firstName} 👋` : `Bienvenue, ${firstName} ! 👋`}
           body={ar
             ? 'أنت الآن مربّياً شريكاً في منصة نخيل. اطلب أعلافك المصنوعة من نفايات النخيل الجزائري مباشرة عبر المنصة مع ضمان التتبع الكامل.'
-            : 'Vous rejoignez Nakheel en tant qu\'Éleveur Partenaire. Commandez vos aliments fabriqués à partir de résidus de palmier algérien, avec traçabilité complète par QR code.'
+            : 'Vous rejoignez GourFeed en tant qu\'Éleveur Partenaire. Commandez vos aliments fabriqués à partir de résidus de palmier algérien, avec traçabilité complète par QR code.'
           }
           tip={ar ? '💡 كل طلب مرتبط برقم دفعة إنتاج قابل للتتبع عبر رمز QR' : '💡 Chaque commande est liée à un lot de production traçable par QR code'}
         />
@@ -127,7 +127,7 @@ export function OnboardingWizard({ user, onComplete }: Props) {
         title={ar ? `أهلاً بك يا ${firstName} 👋` : `Bienvenue, ${firstName} ! 👋`}
         body={ar
           ? `لقد انضممت إلى منصة نخيل بصفة ${user.role === 'admin' ? 'مدير' : 'مشغّل'}. يمكنك إدارة جميع عمليات المنصة من لوحة التحكم.`
-          : `Vous rejoignez Nakheel en tant que ${user.role === 'admin' ? 'Administrateur' : 'Opérateur'}. Gérez toutes les opérations de la plateforme depuis votre tableau de bord.`
+          : `Vous rejoignez GourFeed en tant que ${user.role === 'admin' ? 'Administrateur' : 'Opérateur'}. Gérez toutes les opérations de la plateforme depuis votre tableau de bord.`
         }
         tip={ar ? '📊 ابدأ بمراجعة لوحة التحكم لمتابعة حالة المنصة' : '📊 Commencez par le tableau de bord pour surveiller l\'état de la plateforme'}
       />
