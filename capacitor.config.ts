@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'dz.nakheel.app',
-  appName: 'Nakheel',
+  appName: 'GourFeed',
   webDir: 'out', // Next.js static export output
   server: {
     // En développement : pointer vers le serveur Next.js local
